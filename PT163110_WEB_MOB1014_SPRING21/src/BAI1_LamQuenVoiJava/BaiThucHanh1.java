@@ -5,6 +5,10 @@
  */
 package BAI1_LamQuenVoiJava;
 
+import java.util.Scanner;
+
+
+
 /**
  *
  * @author Dungna29
@@ -20,4 +24,17 @@ public class BaiThucHanh1 {
         và những số đó ra màn hình.
         so1 + so2 + so3 + so4 + so5 = kết quả.   
     */
+    public static void main(String[] args) {
+         //Bước 1: Khai báo biến hoặc thư viện 
+         Scanner sc = new Scanner(System.in);
+         double diem1,diem2;
+         //Bước 2: Triển khai thu thập dữ liệu
+         System.out.println("Mời bạn nhập điểm số 1: ");
+         diem1 = sc.nextDouble();
+         System.out.println("Mời bạn nhập điểm số 2: ");
+         diem2 = sc.nextDouble();
+         //Bước 3: Xử lý nghiệp vụ theo đầu bài
+         System.out.printf("Điểm số 1 = %f và Điểm số 2 = %f",diem1,diem2);
+    }
 }
+
