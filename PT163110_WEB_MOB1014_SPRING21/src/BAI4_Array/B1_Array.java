@@ -76,5 +76,24 @@ public class B1_Array {
         for (var x : arrNumber) {
             System.out.println(x);
         }
+        
+        //Ví dụ tổng hợp về mảng:
+        Scanner sc = new Scanner(System.in);
+        int[] arrNumber3;
+        int inputNumber;
+        System.out.print("Mời bạn nhập số lượng số muốn thêm vào: ");
+        inputNumber = sc.nextInt();
+        //Khởi tạo mảng sau khi người dùng đưa ra độ dài mảng
+        arrNumber3 =  new int[inputNumber];
+        //Nhập dữ liệu vào mảng
+        for (int i = 0; i < arrNumber3.length; i++) {
+            System.out.printf("Mời ban nhập số thứ %d:  ",i);
+            arrNumber3[i] = sc.nextInt();//Gán giá trị cho mảng tại vị trí
+        }
+        //Xuất dữ liệu
+        System.out.println("Dãy số bạn vừa nhập là: ");
+        for (int x: arrNumber3) {
+            System.out.print(x + " ");
+        }
     }
 }
