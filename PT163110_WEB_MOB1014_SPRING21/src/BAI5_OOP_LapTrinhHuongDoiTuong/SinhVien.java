@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BAI_OOP_LapTrinhHuongDoiTuong;
+package BAI5_OOP_LapTrinhHuongDoiTuong;
 
 /**
  *
@@ -23,7 +23,7 @@ public class SinhVien {
     //Phần 3: Getter và Setter
     
     //Phần 4: Phương thức
-    void inRaManHinh(){
+    public void inRaManHinh(){
         System.out.printf("Chào mừng %s + %s \n",ten,sdt);
     }
 }

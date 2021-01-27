@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BAI_OOP_LapTrinhHuongDoiTuong;
+package BAI5_OOP_LapTrinhHuongDoiTuong;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -76,6 +79,7 @@ public class B1_LyThuyet_OOP {
         int namsinhCho;
         
         //1. Khởi tạo đối tượng
+     
         SinhVien sv1 = new SinhVien();//Khởi tạo 1 đối tượng (Chỉ có thể lưu trữ 1 sinh viên)
         SinhVien sv2;
         sv2 = new SinhVien();
@@ -87,5 +91,7 @@ public class B1_LyThuyet_OOP {
         //3. Gọi phương thức của đối tượng
         sv1.inRaManHinh();
         sv2.inRaManHinh();
+        
+        
     }
 }
