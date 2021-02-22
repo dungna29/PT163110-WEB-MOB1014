@@ -11,44 +11,38 @@ package BAI5_OOP_LapTrinhHuongDoiTuong;
  */
 public class GiaoVien {
 
-    //Phần 1 Khai báo các thuộc tính của đối tượng
-    private String tengv;
-    private String magv;
-    private int tuoi;
-    private String email;
-    private String quequan;
-    private int sdt;
+    //Phần 1: Khai báo các thuộc tính phải có của đối tượng
+   private String tengv;
+   private String magv;
+   private long sdt;
+   private int tuoi;    
+   private String email;
+   private String Truong = "FPT POLY";
 
-    //Phần 2 Hàm tạo || Contructor
-    //Hàm tạo giống với tên class + sử dụng phím Alt + Insert để tạo contructor
-    //Contructor không tham số
-    public GiaoVien() {
-        quequan = "HN";
-        System.out.println("Đây là text in ra từ contructor GiaoVien");
-    }
-
-    //Contructor có tham số Alt + Insert -> Select All
-    //Sử dụng contructor có tham số để gán giá trị cho đối tượng
-    public GiaoVien(String tengv, String magv, int tuoi, String email, String quequan, int sdt) {
-        this.tengv = tengv;
-        this.magv = magv;
-        this.tuoi = tuoi;
-        this.email = email;
-        this.quequan = quequan;
-        this.sdt = sdt;
-    }
-    //this dùng để tham chiếu để thuộc tính và phương thức của lớp hiện tại
-    
-    //Phần 2 Vì các thuộc tính bị private nên phải sử dụng GETTER VÀ SETTER để lấy và gán giá trị
-    //Dựa vào tính chất đóng gói trong lập trình hướng đối tượng:
     /*
-    - Che dấu các thuộc tính
-    - Sử dụng phương thức Getter và Setter để lấy và gán giá trị
-    - Mục đính che dấu:
-    - Bảo vệ dữ liệu
-    - Tăng cường khả năng mở rộng
+    Phần 2: Hàm tạo || Contructor
+    + Contructor giống với class 
+    + Để tạo sử dụng phím ALT + INSERT chọn CONTRUCTOR
     */
-    //Sử dụng phím Alt + Insert chọn Getter và Setter
+    //Tạo Contructor không tham số
+    public GiaoVien() {
+        //System.out.println("Đây là text in ra từ Contructor không tham số của đối tượng GV");
+    }
+    
+    //Tạo Contructor có tham số
+    //ALT + INSERT chọn CONTRUCTOR -> Select All
+    public GiaoVien(String tengv1, String magv, long sdt, int tuoi, String email) {
+        tengv = tengv1;//Khi không dùng từ khóa this phải đổi tên tham số truyền vào
+        this.magv = magv;
+        this.sdt = sdt;
+        this.tuoi = tuoi;
+        this.email = email;        
+    }
+    //this được sử dụng để tham chiếu đến thuộc tính và phương thức của lớp hiện tại
+   
+    //Phần 3: Vì các thuộc tính bị Private nên sẽ phải sử dụng Getter và Setter
+    //Khi private các thuộc tính nhằm che dấu (Encapsulation) trong hướng đối tượng là 1 trong 4 tính chất của OOP
+    //Alt + Insert hoặc chuột phải chọn Insert Code chọn Getter và Setter ->Select All
 
     public String getTengv() {
         return tengv;
@@ -66,6 +60,14 @@ public class GiaoVien {
         this.magv = magv;
     }
 
+    public long getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(long sdt) {
+        this.sdt = sdt;
+    }
+
     public int getTuoi() {
         return tuoi;
     }
@@ -81,21 +83,22 @@ public class GiaoVien {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getQuequan() {
-        return quequan;
+    
+    public String getTruong() {
+        return Truong;
     }
 
-    public void setQuequan(String quequan) {
-        this.quequan = quequan;
-    }
+    //Phần 4: Phương thức của đối tượng
 
-    public int getSdt() {
-        return sdt;
+    //Alt + Insert -> toString() - Phương thức trả về 1 chuỗi dùng để in giá trị của các thuộc tính
+    @Override
+    public String toString() {//Hàm trả về kiểu chuỗi
+        return "GiaoVien{" + "tengv=" + tengv + ", magv=" + magv + ", sdt=" + sdt + ", tuoi=" + tuoi + ", email=" + email + ", Truong=" + Truong + '}';
     }
-
-    public void setSdt(int sdt) {
-        this.sdt = sdt;
+    
+    //Hoặc có thể tự viết 1 phương thức in ra màn hình
+    void inRaManHinh(){
+        System.out.printf("Tên GV: %s | Mã GV: %s | SDT: %d | Tuoi: %d",tengv,getMagv(),getSdt(),tuoi);
     }
     
 }

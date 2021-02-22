@@ -12,28 +12,39 @@ package BAI5_OOP_LapTrinhHuongDoiTuong;
 public class Main {
 
     public static void main(String[] args) {
-        //Gọi đối tượng để sử dụng
-        GiaoVien gv1 = new GiaoVien();//Khởi tạo 1 đối tượng giáo viên
-        //Khởi tạo ra 1 đối tượng GV để có thể gán giá trị cho đối tượng đó.
-//        gv1.tengv = "DũngNA";
-//        gv1.tuoi = 31;
-//        gv1.email = "dungna29@fe.edu";
-
-        //Sử dụng contructor không tham số để gán giá trị
-        //Sử dụng contrcutor không tham số tạo 1 đối tượng giáo viên
-        GiaoVien gv3 = new GiaoVien();
-        //Gán giá trị bằng cách gọi tên biến gv3 chấm thuộc tính và gán giá trị
-//        gv3.tengv = "DũngNA";
-//        gv3.tuoi = 31;
-//        gv3.email = "dungna29@fe.edu";
-
-        //Sử dụng contrcutor có tham số tạo 1 đối tượng giáo viên
-        //Sử dụng contructor có tham số để gán giá trị cho đối tượng
-        //Lưu ý: Vị trí của tham số phải đúng kiểu dữ liệu
-        GiaoVien gv2 = new GiaoVien("Dũng", "Dungna29", 31, "dungna@gmail", "HN", 0123456);
+       //P1: Gọi đối tượng ra để sử dụng thì cần phải biết tên của đối tượng
+        GiaoVien gv1 = new GiaoVien();//Khởi tạo ra 1 đối tượng giáo viên
+        //gv1.tengv ="Minh";//Gán giá trị cho thuộc tính của đối tượng
+        //System.out.println(gv1.tengv);//In giá trị của thuộc tính đối tượng ra màn hình
         
-        //Khi các thuộc tính bị private thì sử dụng Getter và Setter
-        gv2.setTengv("Long");
-        System.out.println(gv2.getTengv());
+        //P2: Contructor không tham số
+        // Không nhất thiết phải gán giá trị cho đối tượng khi khởi tạo
+        GiaoVien gv2 = new GiaoVien();
+        //Gán giá trị cho từng thuộc tính
+        //gv2.tengv = "Long";
+        //gv2.magv ="longnt";
+        //gv2.tuoi = 23;
+        //System.out.println(gv2.tengv);
+        
+        //P3: Contructor có tham số
+        // Phải gán giá trị cho đối tượng ngay khi khởi tạo
+        //Các vị trí của giá trị gán vào phải tương ứng với các tham số
+        GiaoVien gv3 = new GiaoVien("Dũng", "Dungna", 123456, 32, "dungna@gmail.com");
+        //System.out.println(gv3.tengv);
+        
+        //P4: Cách gán giá trị khi thuộc tính bị private
+        GiaoVien gv4 = new GiaoVien();
+        //Sử dụng phương thức Set để gán giá trị cho các thuộc tính của đối tượng
+        gv4.setTengv("Thiện");
+        gv4.setMagv("Thienth");
+        gv4.setTuoi(29);
+        
+        //Sử dụng phương thức Get để lấy giá trị thuộc tính của đối tượng
+        System.out.println(gv4.getTengv() + " " + gv4.getMagv() + " " +gv4.getTruong());
+        
+        //P5: Sử dụng phương thức in màn hình toString
+        System.out.println(gv3.toString());
+        //Sử dụng phương in màn hình riêng
+        gv3.inRaManHinh();
     }
 }
