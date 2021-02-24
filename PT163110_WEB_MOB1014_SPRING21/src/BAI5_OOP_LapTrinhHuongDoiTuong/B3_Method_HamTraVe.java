@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Dungna29
  */
-public class B3_Method_PhuongThucTraVe {
+public class B3_Method_HamTraVe {
 
     /*
          * Method trả về công thức và định nghĩa ở bên B2
