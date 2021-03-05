@@ -1,4 +1,4 @@
-package Buoi8_XuLyChuoi;
+package BAI8_XuLyChuoi;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,8 +24,8 @@ public class Main {
         if (pass1.equalsIgnoreCase(pass2)) {
             System.out.println("equalsIgnoreCase Đăng nhập thành công");
         }
-        String pass3 = "abc d";
-        String pass4 = " ";
+        String pass3 = "dungnaph00532";
+        String pass4 = "ph00532";
          if (pass3.contains(pass4)) {
             System.out.println("contains Đăng nhập thành công");
         }

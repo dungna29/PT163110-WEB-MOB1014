@@ -54,8 +54,7 @@ public class B7_CauLenhDieuKien_ELSE_IF {
              * Cân nặn từ 100 đến 200kg --> Mức siêu béo phì 
          */
         double canNang = 40;
-        if (canNang <= 50) {
-
+        if (canNang <= 50) {            
         } else if (canNang <= 65) {
 
         } else if (canNang <= 80) {

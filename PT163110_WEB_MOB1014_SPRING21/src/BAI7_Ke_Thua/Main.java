@@ -47,8 +47,9 @@ public class Main {
         sv2.setTen("Dũng");
         sv2.setTenDem("Anh");
         sv2.setMaSv("dungna");
-        sv2.setDiemJava("7");
-        SinhVien sv3 = new SinhVien("dungna", "6", "Nguyễn", "Anh", "Dũng", "1999");
+        sv2.setDiemJava(7.6);
+        SinhVien sv3 = new SinhVien("dungna", 7.6, "Nguyễn", "Anh", "Dũng", "1999");
+        sv3.inRaManHinh();
 
         // - Nạp chồng (Overloading) - các phương thức có tên giống nhau nhưng khác tham số sẽ cho ra kết quả khác nhau
         //sv2.inRaManHinhTest();

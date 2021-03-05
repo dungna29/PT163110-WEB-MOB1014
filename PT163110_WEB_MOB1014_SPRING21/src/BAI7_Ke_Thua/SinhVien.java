@@ -12,17 +12,18 @@ package BAI7_Ke_Thua;
 public class SinhVien extends Person{//Sử dụng từ khóa extends để kế thừa lớp cha
     
     private String maSv;   
-    private String diemJava;
+    private double diemJava;
 
     public SinhVien() {
     }
 
-    public SinhVien(String maSv, String diemJava, String ho, String tenDem, String ten, String namSinh) {
+    public SinhVien(String maSv, double diemJava, String ho, String tenDem, String ten, String namSinh) {
         super(ho, tenDem, ten, namSinh);
         this.maSv = maSv;
         this.diemJava = diemJava;
     }
 
+   
     public String getMaSv() {
         return maSv;
     }
@@ -31,14 +32,16 @@ public class SinhVien extends Person{//Sử dụng từ khóa extends để kế
         this.maSv = maSv;
     }
 
-    public String getDiemJava() {
+    public double getDiemJava() {
         return diemJava;
     }
 
-    public void setDiemJava(String diemJava) {
+    public void setDiemJava(double diemJava) {
         this.diemJava = diemJava;
     }
-
+    
+   
+    
     @Override
     public String toString() {        
         return "SinhVien{" + "maSv=" + maSv + ", diemJava=" + diemJava + '}';
@@ -47,8 +50,8 @@ public class SinhVien extends Person{//Sử dụng từ khóa extends để kế
     //ALT + INSER -> OVERDIDE METHOD -> PHƯƠNG THỨC LỚP CHA
 
     @Override
-    void inRaManHinh() {
-        System.out.println("Đây là phương thức inRaManHinh() của lớp cha nhưng đã bị lớp con kế thừa và sửa đổi");
+    void inRaManHinh() {       
+        System.out.printf("Mã SV: %s Điểm Java: %s ",maSv,diemJava < 0 ? "N/A": diemJava);
     }
     
     
